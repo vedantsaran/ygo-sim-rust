@@ -1,0 +1,41 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/neon-ygo-core",
+    "crates/neon-ygo-lua",
+    "crates/neon-ygo-db",
+    "crates/neon-ygo-replay",
+    "crates/neon-ygo-net",
+    "crates/neon-ygo-ai",
+    "crates/neon-ygo-gui",
+    "crates/neon-ygo-cli",
+]
+
+[workspace.package]
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+authors = ["Neon YGO Contributors"]
+description = "100% pure-Rust, feature-accurate Yu-Gi-Oh! simulator with 1:1 YGO Omega parity"
+
+[workspace.dependencies]
+neon-ygo-core = { path = "crates/neon-ygo-core" }
+neon-ygo-lua = { path = "crates/neon-ygo-lua" }
+neon-ygo-db = { path = "crates/neon-ygo-db" }
+neon-ygo-replay = { path = "crates/neon-ygo-replay" }
+neon-ygo-net = { path = "crates/neon-ygo-net" }
+neon-ygo-ai = { path = "crates/neon-ygo-ai" }
+neon-ygo-gui = { path = "crates/neon-ygo-gui" }
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+bitflags = { version = "2", features = ["serde"] }
+base64 = "0.22"
+flate2 = { version = "1", default-features = false, features = ["rust_backend"] }
+lzma-rs = "0.3"
+rand = "0.8"
+rand_chacha = "0.3"
+thiserror = "2"
+tokio = { version = "1", features = ["rt-multi-thread", "net", "io-util", "sync", "time", "macros"] }
+eframe = { version = "0.31", default-features = false, features = ["wgpu", "default_fonts"] }
+egui = "0.31"

@@ -1,0 +1,15 @@
+[package]
+name = "neon-ygo-replay"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+neon-ygo-core.workspace = true
+neon-ygo-db.workspace = true
+neon-ygo-lua.workspace = true
+flate2.workspace = true
+lzma-rs.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true

@@ -1,0 +1,16 @@
+[package]
+name = "neon-ygo-gui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+neon-ygo-core.workspace = true
+neon-ygo-db.workspace = true
+neon-ygo-lua.workspace = true
+neon-ygo-ai.workspace = true
+neon-ygo-net.workspace = true
+neon-ygo-replay.workspace = true
+eframe.workspace = true
+egui.workspace = true
+serde.workspace = true
